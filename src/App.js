@@ -8,13 +8,7 @@ function App() {
   const [color, setColor] = useState("");
   const [name, setName] = useState("");
   const [submitting, setSubmitting] = useState(false);
-  const [choices, setChoices] = useState([
-    {
-      name: "Peter",
-      color: "Green",
-      account: "account",
-    },
-  ]);
+  const [choices, setChoices] = useState([]);
 
   const changeName = (name) => {
     setName(name);
@@ -71,11 +65,11 @@ function App() {
 
         console.log(colorUpdate);
         setSubmitting(false);
-      } else {
-        alert("Unable to match your address to a previous entry");
       }
     } catch (err) {
-      console.log(err);
+      alert("Unable to match your address to a previous entry");
+      setSubmitting(false);
+
     }
   };
 
@@ -134,9 +128,13 @@ function App() {
             <option value="White">White</option>
           </select>
           <br />
-          <button type="submit">Submit</button>
+          <button className="action-btn" type="submit">
+            Submit
+          </button>
         </form>
-        <button onClick={onUpdate}>Update</button>
+        <button className="action-btn" onClick={onUpdate}>
+          Update
+        </button>
 
         <hr />
         <h2>Current choices:</h2>

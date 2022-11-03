@@ -31,6 +31,7 @@
 .choice {
   margin-left: 5px;
 }
+
 .Black {
   color: black;
 }
@@ -42,6 +43,7 @@
 .Green {
   color: green;
 }
+
 .Red  {
   color: red;
 }
@@ -50,6 +52,7 @@
   color: white;
   background-color: black;
 }
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
